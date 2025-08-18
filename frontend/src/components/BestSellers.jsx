@@ -8,7 +8,7 @@ const BestSellers = () => {
     <>
       <div className="mt-16">
         <p className="text-2xl font-medium md:text-3xl">BestSellers</p>
-        <div className="my-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center justify-center" >
+        <div className="grid my-6 md:grid-cols-3 lg:grid-cols-5 gap-4 items-center justify-center" >
           {products
             .filter((product) => product.inStock)
             .slice(0, 5)

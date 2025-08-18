@@ -36,9 +36,9 @@ const Navbar = () => {
         </Link>
         <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
           <input
-          onChange={(e)=>{
-            setSearchQuery(e.target.value) 
-          }}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+            }}
             className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500"
             type="text"
             placeholder="Search products"
@@ -146,10 +146,26 @@ const Navbar = () => {
       <div
         className={`${
           open ? "flex" : "hidden"
-        } absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}
+        } absolute z-50 top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}
       >
         <Link to={"/"}>Home</Link>
         <Link to={"/products"}>Products</Link>
+
+{/* mobile cart  */}
+           <div
+          onClick={() => navigate("/cart")}
+          className="relative cursor-pointer"
+        >
+          <img
+            className="w-7 h-7 "
+            src={"src/assets/cart_icon.svg"}
+            alt="cart-icon"
+          />
+
+          <button className="absolute -top-2 -right-6  text-xs text-white bg-indigo-500 w-[32px]  h-[18px]   rounded-full">
+            {totalCartItems()}
+          </button>
+        </div>
         {user ? (
           <>
             <div className="relative group">
