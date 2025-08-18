@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { AppContext } from "../Context/AppContext";
-import ProductCard from "../components/productCard";
+import ProductCard from "../components/ProductCard";
 
 const SingleProduct = () => {
   const { products, navigate, addToCart } = useContext(AppContext);
