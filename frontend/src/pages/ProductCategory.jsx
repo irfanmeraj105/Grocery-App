@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { categories } from "../assets/assets";
 import ProductCard from "../components/ProductCard";
+
 import { useParams } from "react-router-dom";
 import { AppContext } from "../Context/AppContext";
 const ProductCategory = () => {
